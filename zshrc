@@ -52,17 +52,20 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
-# fi
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

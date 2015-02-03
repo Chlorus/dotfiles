@@ -1,5 +1,3 @@
-set nocompatible
-
 execute pathogen#infect()
 set history=700
 
@@ -9,6 +7,7 @@ filetype indent on
 set autoread
 let mapleader = ","
 let g:mapleader = ","
+set nocompatible
 
 nmap <leader>w :w!<cr>
 
