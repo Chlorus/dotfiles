@@ -1,13 +1,16 @@
+set nocompatible
 execute pathogen#infect()
 set history=700
 
+set t_Co=256
 filetype plugin on
 filetype indent on
+
+set omnifunc=syntaxcomplete#Complete
 
 set autoread
 let mapleader = ","
 let g:mapleader = ","
-set nocompatible
 
 nmap <leader>w :w!<cr>
 
@@ -22,7 +25,6 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 set ignorecase
-
 set smartcase
 
 set hlsearch
@@ -43,7 +45,8 @@ set t_vb=
 set tm=50
 
 syntax enable
-set t_Co=256
+set background=dark
+"colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -59,6 +62,8 @@ set encoding=utf8
 " " Use Unix as the standard file type
 set ffs=unix,dos,mac
 "
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 set expandtab
 set smarttab
